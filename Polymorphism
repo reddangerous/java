@@ -1,0 +1,38 @@
+class Shape {
+double d1, d2;
+Shape (double d1, double d2) {
+this.d1 = d1 ; 
+this.d2 = d2 ;
+}
+double area(){
+System.out.println("Area of Shape");
+return 0;
+}
+}
+class Rectangle extends Shape {
+Rectangle (double a, double b){
+super(a,b);
+}
+double area() {
+System.out.println("Area of Reatangle");
+return d1 * d2;
+}
+}
+class Triangle extends Shape {
+Triangle(double a, double b){
+super(a,b);
+}
+double area() {
+System.out.println("Area of Triangle");
+return (d1 * d2) / 2;
+}
+}
+public class MainClass {
+public static void main(String[] args) {
+Shape[]shape={new Shape(10,10),new Rectangle(9,5),new Triangle(10,8)};
+int index=0;
+while (index<3){
+System.out.println("Area is = " + shape[index++].area());
+}
+}
+}
